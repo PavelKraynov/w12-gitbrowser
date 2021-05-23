@@ -53,10 +53,8 @@ const RootComponent = (props) => {
             <Route exact path="/" component={Home} />
             <Route exact path="/:userName" component={Repos} />
             <Route exact path="/:userName/:repositoryName" component={Readme} />
-        
             <PrivateRoute exact path="/hidden-route" component={DummyView} />
             <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} />
-
             <Route component={NotFound} />
           </Switch>
         </Startup>
