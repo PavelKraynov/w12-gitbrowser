@@ -14,7 +14,9 @@ const Readme = () => {
       `https://raw.githubusercontent.com/${userName}/${repositoryName}/master/README.md`
     ).then((it) => setText(it.data))
     .catch(() => setText('No readme file'))
-    return () => {}
+    return (
+      () => {}
+    )
   }, [])
   return (
     <div>
