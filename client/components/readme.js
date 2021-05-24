@@ -17,7 +17,7 @@ const Readme = () => {
     return (
       () => {}
     )
-  }, [])
+  }, [userName, repositoryName])
   return (
     <div>
       <Head title="Readme" />
