@@ -16,7 +16,7 @@ const Home = () => {
       <div> Hello World Dashboard </div>
 
       <div>
-        <input id ='input-field'
+        <input id ="input-field"
           className="border rounded py-1 px-2"
           type="text"
           onChange={(e) => {
@@ -27,7 +27,7 @@ const Home = () => {
         />
       </div>
       <div>
-        <button id='search-button' type="button" onClick={click}>
+        <button id="search-button" type="button" onClick={click}>
           Go
         </button>
       </div>

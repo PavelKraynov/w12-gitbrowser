@@ -10,13 +10,10 @@ const Readme = () => {
   const { userName, repositoryName } = useParams()
   console.log(setText)
   useEffect(() => {
-    axios(
-      `https://raw.githubusercontent.com/${userName}/${repositoryName}/master/README.md`
-    ).then((it) => setText(it.data))
-    .catch(() => setText('No readme file'))
-    return (
-      () => {}
-    )
+    axios(`https://raw.githubusercontent.com/${userName}/${repositoryName}/master/README.md`)
+      .then((it) => setText(it.data))
+      .catch(() => setText('No readme file'))
+    return () => {}
   }, [userName, repositoryName])
   return (
     <div>
@@ -24,7 +21,9 @@ const Readme = () => {
       <Header userName={userName} />
       <div className="flex items-center justify-center h-screen">
         <div className="bg-indigo-800 hover:text-red-500 text-white font-bold rounded-lg border shadow-lg p-10">
-          <Markdown>{text}</Markdown>
+          <Markdown>
+            <div id="description">{text}</div>
+          </Markdown>
         </div>
       </div>
     </div>

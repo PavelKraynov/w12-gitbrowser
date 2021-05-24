@@ -23,7 +23,7 @@ const Repos = () => {
           hello repos
         </div> 
         <div>
-          <ol className='list-decimal list-inside'>
+          <ol className="list-decimal list-inside">
           {users.map(user => {
            return ( 
            <div key={user.id}>
